@@ -4,12 +4,15 @@ import '/src/assets/main.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
+import axios from 'axios'
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL
+axios.defaults.headers.common['Content-Type'] = 'application/json'
+axios.defaults.headers.common['Accept'] = 'application/json'
 
+const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 
