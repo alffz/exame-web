@@ -2,7 +2,7 @@
   <div v-if="showQuestion" class="row vh-100 d-flex align-items-center">
     <div class="col-sm-8 col-md-8 mb-3 mb-sm-0 v">
         <div class="mb-3 text-whites">
-          <label class="form-check-label text-white mb-3">Pilih pelajaran</label>
+          <label class="form-check-label text-white mb-3">Pilih soal</label>
           <select v-model="lessonId" class="form-select" aria-label="Default select example">
             <option v-for="lesson in lessons" :key="lesson" :value="lesson.id">{{ lesson.name }}</option>
           </select>

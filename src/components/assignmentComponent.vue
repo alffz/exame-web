@@ -15,7 +15,7 @@
             <th>{{ props.assignmentResult.truth }}</th>
             <td>{{ wrongAnswer }}</td>
             <td>{{ notAnswer }}</td>
-            <td>{{ score.toFixed(0) }}</td>
+            <td>{{ score.toFixed(1) }}</td>
           </tr>
         </tbody>
       </table>  

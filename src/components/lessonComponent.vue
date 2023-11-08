@@ -6,7 +6,7 @@
           <div class="card rounded-5 mt-3"> 
             <div class="card-body d-flex justify-content-between align-items-center">
                 <div class="mb-3">
-                  <label for="pelajaran" class="form-label text-light-red">Nama pelajaran </label>
+                  <label for="pelajaran" class="form-label text-light-red">Soal</label>
                   <input v-model="lesson" type="text" class="form-control" id="pelajaran" placeholder="Matematika" >
                   <small class="text-white">Total soal : {{ totalQuestions }} </small>
                 </div>
