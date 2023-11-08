@@ -143,9 +143,9 @@ const getLessonById = async ()=>{
 
  const submit = async ()=>{
   try{
-    const answered = questions.value.reduce((acc,curr) =>{
-      const id = curr.id
-      const answers = curr?.answers || null
+    const answered = questions.value.reduce((acc,question) =>{
+      const id = question.id
+      const answers = question?.answers || null
       acc[id] = answers
       return acc
     },{})

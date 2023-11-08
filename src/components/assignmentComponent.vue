@@ -43,7 +43,7 @@ import {computed} from 'vue'
 const emit = defineEmits(['toggleComponent'])
 const props = defineProps({
   assignmentResult:Object
-  })
+})
 const close =  ()=>{
   emit('toggleComponent')
 }
@@ -59,13 +59,10 @@ const printResult = (choice, prop) => {
 };
 
 const wrongAnswer = computed(()=> {
-  const removeChoiceNullPropery = props.assignmentResult.data.filter((item) => {
-    return !('null' in item.choice)
-  })
-
-  const wrongAnswer = removeChoiceNullPropery.reduce((acc,curr)=>{
+  
+  const wrongAnswer = props.assignmentResult.data.reduce((acc,curr)=>{
     for (let prop in curr.choice) {
-      if (typeof curr.choice[prop] === 'object' && curr.choice[prop].answer === false) {
+      if (!('null' in curr.choice) && typeof curr.choice[prop] === 'object' && curr.choice[prop].answer === false) {
         acc +=1
       }
     }
